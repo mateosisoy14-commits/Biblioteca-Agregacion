@@ -3,27 +3,32 @@ public class Libro {
     private String autor;
     private boolean disponible;
 
+    // C
     public Libro() {
         this.disponible = true;
     }
 
+    // C
     public Libro(String titulo, String autor) {
         this.titulo = titulo;
         this.autor = autor;
         this.disponible = true;
     }
 
+    // C
     public Libro(String titulo, String autor, boolean disponible) {
         this.titulo = titulo;
         this.autor = autor;
         this.disponible = disponible;
     }
 
+    
     public String getTitulo() { return titulo; }
     public String getAutor() { return autor; }
     public boolean isDisponible() { return disponible; }
     public void setDisponible(boolean disponible) { this.disponible = disponible; }
 
+    // M
     public void mostrarInfo() {
         System.out.println("---- Libro ----");
         System.out.println("Título   : " + titulo);
@@ -31,6 +36,7 @@ public class Libro {
         System.out.println("Disponible: " + (disponible ? "Sí" : "No"));
     }
 
+    // M
     public boolean prestar() {
         if (disponible) {
             disponible = false;
@@ -42,6 +48,7 @@ public class Libro {
         }
     }
 
+    // M
     public void devolver() {
         disponible = true;
         System.out.println("El libro \"" + titulo + "\" fue devuelto.");
